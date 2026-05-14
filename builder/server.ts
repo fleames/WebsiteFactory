@@ -793,6 +793,20 @@ app.post('/api/vercel-deploy', async (req, res) => {
   }
 });
 
+// ── Website scraper ───────────────────────────────────────────────────────────
+
+app.post('/api/scrape', async (req, res) => {
+  const { url } = req.body as { url?: string };
+  if (!url?.trim()) { res.status(400).json({ error: 'url required' }); return; }
+  try {
+    const { scrapeWebsite } = await import('../ai/scrape.js');
+    const result = await scrapeWebsite(url.trim());
+    res.json(result);
+  } catch (e) {
+    res.status(500).json({ error: (e as Error).message });
+  }
+});
+
 // SPA fallback
 app.get(/(.*)/, (_req, res) => {
   const indexHtml = path.join(uiDist, 'index.html');
