@@ -1,0 +1,515 @@
+{
+  "version": "1.0",
+  "id": "proj_electrofix_berlin",
+  "business": {
+    "name": "ElectroFix Berlin",
+    "industry": "electrician",
+    "city": "Berlin",
+    "country": "DE",
+    "phone": "+49 30 123 4567",
+    "email": "info@electrofix-berlin.de",
+    "address": "Musterstraße 12, 10115 Berlin",
+    "hours": "Mon–Sat 8am–8pm • Emergency: 24/7",
+    "founded": "2009"
+  },
+
+  "theme": {
+    "colors": {
+      "brand": "#F59E0B",
+      "brandDark": "#D97706",
+      "accent": "#111827",
+      "background": "#FFFFFF",
+      "surface": "#FAFAFA",
+      "text": "#111827",
+      "textMuted": "#6B7280",
+      "border": "#E5E7EB",
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "error": "#EF4444"
+    },
+    "typography": {
+      "fontHeading": "Inter",
+      "fontBody": "Inter",
+      "scale": "default"
+    },
+    "spacing": "default",
+    "radius": "md",
+    "shadow": "md",
+    "buttons": {
+      "style": "filled",
+      "radius": "md"
+    }
+  },
+
+  "globals": {
+    "nav": {
+      "variant": "sticky_top",
+      "logo": { "type": "text", "value": "ElectroFix" },
+      "links": [
+        { "label": "Services", "href": "/services" },
+        { "label": "About", "href": "/about" },
+        { "label": "Pricing", "href": "/#pricing" },
+        { "label": "Contact", "href": "/contact" }
+      ],
+      "cta": { "label": "Call Now", "href": "tel:+4930123456", "style": "filled" },
+      "phone": "+49 30 123 4567"
+    },
+    "footer": {
+      "variant": "columns",
+      "logo": { "type": "text", "value": "ElectroFix" },
+      "tagline": "Fast, licensed electricians in Berlin — available 24/7 for emergencies.",
+      "columns": [
+        {
+          "heading": "Services",
+          "links": [
+            { "label": "Emergency Callouts", "href": "/services/emergency" },
+            { "label": "Fuse Box & Rewiring", "href": "/services/fuse-box" },
+            { "label": "Lighting Installation", "href": "/services/lighting" },
+            { "label": "EV Charger Install", "href": "/services/ev-charger" }
+          ]
+        },
+        {
+          "heading": "Company",
+          "links": [
+            { "label": "About Us", "href": "/about" },
+            { "label": "Pricing", "href": "/#pricing" },
+            { "label": "Blog", "href": "/blog" },
+            { "label": "Contact", "href": "/contact" }
+          ]
+        }
+      ],
+      "contact": {
+        "phone": "+49 30 123 4567",
+        "email": "info@electrofix-berlin.de",
+        "address": "Musterstraße 12, 10115 Berlin"
+      },
+      "social": [
+        { "platform": "instagram", "url": "https://instagram.com/electrofixberlin" },
+        { "platform": "facebook", "url": "https://facebook.com/electrofixberlin" }
+      ],
+      "copyright": "© 2024 ElectroFix Berlin. All rights reserved."
+    },
+    "formWebhook": "https://hooks.example.com/electrofix-leads",
+    "analyticsGa4": "G-XXXXXXXXXX"
+  },
+
+  "pages": [
+    {
+      "id": "home",
+      "slug": "/",
+      "title": "Home",
+      "seo": {
+        "title": "ElectroFix Berlin – Licensed Emergency Electricians",
+        "description": "Fast, reliable electrical services in Berlin. Licensed electricians, 60-min emergency response, transparent pricing. Call us 24/7.",
+        "ogImage": "/assets/og-home.jpg",
+        "schema": "LocalBusiness"
+      },
+      "blocks": [
+        {
+          "id": "hero",
+          "type": "hero",
+          "variant": "split_image",
+          "data": {
+            "badge": "Available 24/7 for Emergencies",
+            "headline": "Berlin's Most Trusted Electricians",
+            "subtext": "Licensed professionals. 60-minute emergency response. No hidden fees. We fix it right the first time.",
+            "ctas": [
+              { "label": "Call +49 30 123 4567", "href": "tel:+4930123456", "style": "filled" },
+              { "label": "Get a Free Quote", "href": "/contact", "style": "outline" }
+            ],
+            "image": "/assets/hero-electrician.jpg",
+            "imageAlt": "ElectroFix electrician working on a fuse box"
+          },
+          "settings": { "background": "dark", "paddingY": "xl" }
+        },
+
+        {
+          "id": "trust",
+          "type": "trust_bar",
+          "variant": "icon_row",
+          "data": {
+            "items": [
+              { "type": "badge", "label": "VDE Certified", "icon": "shield-check" },
+              { "type": "badge", "label": "Fully Insured", "icon": "shield" },
+              { "type": "stat", "value": "4.9★", "label": "Google Rating" },
+              { "type": "stat", "value": "5,000+", "label": "Jobs Completed" },
+              { "type": "badge", "label": "60-Min Response", "icon": "clock" }
+            ]
+          },
+          "settings": { "background": "brand", "paddingY": "sm" }
+        },
+
+        {
+          "id": "services",
+          "type": "services",
+          "variant": "grid_cards",
+          "data": {
+            "heading": "Everything Electrical, Done Right",
+            "subtext": "From blown fuses at midnight to full rewires — we handle it all.",
+            "columns": 3,
+            "items": [
+              {
+                "icon": "zap",
+                "title": "Emergency Callouts",
+                "description": "Power out, sparks, tripped circuits? We arrive within 60 minutes, 24/7.",
+                "link": "/services/emergency"
+              },
+              {
+                "icon": "cpu",
+                "title": "Fuse Box & Rewiring",
+                "description": "Upgrade old consumer units, replace faulty wiring, bring your home up to code.",
+                "link": "/services/fuse-box"
+              },
+              {
+                "icon": "lightbulb",
+                "title": "Lighting Installation",
+                "description": "Downlights, smart lighting, outdoor security lights — fully installed and tested.",
+                "link": "/services/lighting"
+              },
+              {
+                "icon": "plug",
+                "title": "Socket & Switch Fitting",
+                "description": "New sockets, USB outlets, data points. Tidy, professional finish every time.",
+                "link": "/services/sockets"
+              },
+              {
+                "icon": "car",
+                "title": "EV Charger Installation",
+                "description": "OZEV-approved EV charger installs for home and business. Grant applications handled.",
+                "link": "/services/ev-charger"
+              },
+              {
+                "icon": "building",
+                "title": "Commercial Electrician",
+                "description": "Offices, shops, and restaurants. Planned maintenance contracts available.",
+                "link": "/services/commercial"
+              }
+            ],
+            "cta": { "label": "View All Services", "href": "/services", "style": "outline" }
+          },
+          "settings": { "background": "white", "paddingY": "xl" }
+        },
+
+        {
+          "id": "process",
+          "type": "process",
+          "variant": "numbered_steps",
+          "data": {
+            "heading": "How It Works",
+            "subtext": "Simple, fast, no stress.",
+            "steps": [
+              {
+                "number": 1,
+                "title": "Get in Touch",
+                "description": "Call us or fill out the form. We respond within 2 hours (or instantly for emergencies)."
+              },
+              {
+                "number": 2,
+                "title": "Clear Quote",
+                "description": "Upfront pricing before we start. No surprises, no hidden callout fees."
+              },
+              {
+                "number": 3,
+                "title": "Job Done",
+                "description": "A licensed electrician arrives on time, fixes the problem, and cleans up after."
+              }
+            ],
+            "cta": { "label": "Book a Job", "href": "/contact", "style": "filled" }
+          },
+          "settings": { "background": "surface", "paddingY": "xl" }
+        },
+
+        {
+          "id": "about",
+          "type": "about",
+          "variant": "split_image",
+          "data": {
+            "heading": "Electricians you can actually trust",
+            "body": "ElectroFix has been serving Berlin homeowners and businesses since 2009. We're a team of 12 fully licensed electricians who take pride in honest pricing, clean work, and zero-hassle bookings. No subcontractors. No upselling. Just reliable electrical work done properly.",
+            "highlights": [
+              { "stat": "15+", "label": "Years in Berlin" },
+              { "stat": "5,000+", "label": "Jobs Completed" },
+              { "stat": "4.9★", "label": "Google Rating" },
+              { "stat": "12", "label": "Licensed Electricians" }
+            ],
+            "image": "/assets/team-photo.jpg",
+            "imageAlt": "The ElectroFix team",
+            "cta": { "label": "Meet the Team", "href": "/about", "style": "outline" }
+          },
+          "settings": { "background": "white", "paddingY": "xl" }
+        },
+
+        {
+          "id": "testimonials",
+          "type": "testimonials",
+          "variant": "grid",
+          "data": {
+            "heading": "What Clients Say",
+            "aggregate": { "rating": 4.9, "count": 127, "source": "Google" },
+            "items": [
+              {
+                "name": "Anna M.",
+                "location": "Mitte, Berlin",
+                "rating": 5,
+                "text": "Called at 11pm after a fuse blew. They were here within 45 minutes and sorted it quickly. Incredibly professional and reasonably priced.",
+                "source": "google"
+              },
+              {
+                "name": "Thomas K.",
+                "location": "Prenzlauer Berg, Berlin",
+                "rating": 5,
+                "text": "Replaced our entire consumer unit. Clean work, explained everything clearly, and came in under the quoted price. Will definitely use again.",
+                "source": "google"
+              },
+              {
+                "name": "Sarah L.",
+                "location": "Charlottenburg, Berlin",
+                "rating": 5,
+                "text": "Had them install an EV charger. Handled all the grant paperwork, great communication throughout. Highly recommend for any electrical work.",
+                "source": "google"
+              }
+            ]
+          },
+          "settings": { "background": "surface", "paddingY": "xl" }
+        },
+
+        {
+          "id": "pricing",
+          "type": "pricing",
+          "variant": "cards",
+          "data": {
+            "heading": "Transparent Pricing",
+            "subtext": "Fixed rates for common jobs. No hidden callout fees on weekdays.",
+            "disclaimer": "All prices include VAT. Complex jobs quoted on-site.",
+            "items": [
+              {
+                "name": "Emergency Callout",
+                "price": "€89",
+                "period": "first hour",
+                "description": "24/7 emergency response",
+                "features": [
+                  "60-minute response guarantee",
+                  "Licensed electrician",
+                  "Diagnosis included",
+                  "Parts quoted upfront"
+                ],
+                "cta": { "label": "Book Emergency", "href": "tel:+4930123456", "style": "filled" },
+                "highlighted": false
+              },
+              {
+                "name": "Standard Job",
+                "price": "€65",
+                "period": "per hour",
+                "description": "Sockets, switches, lighting",
+                "features": [
+                  "No callout fee (weekdays)",
+                  "Same-week availability",
+                  "Fully insured work",
+                  "Tidied on completion"
+                ],
+                "cta": { "label": "Get a Quote", "href": "/contact", "style": "filled" },
+                "highlighted": true,
+                "badge": "Most Popular"
+              },
+              {
+                "name": "Fuse Box Upgrade",
+                "price": "From €450",
+                "period": "full job",
+                "description": "Consumer unit replacement",
+                "features": [
+                  "Full survey included",
+                  "Same-day certification",
+                  "10-year parts warranty",
+                  "Landlord certificate included"
+                ],
+                "cta": { "label": "Get a Quote", "href": "/contact", "style": "filled" },
+                "highlighted": false
+              }
+            ]
+          },
+          "settings": { "background": "white", "paddingY": "xl" }
+        },
+
+        {
+          "id": "faq",
+          "type": "faq",
+          "variant": "accordion",
+          "data": {
+            "heading": "Frequently Asked Questions",
+            "items": [
+              {
+                "question": "How quickly can you respond to an emergency?",
+                "answer": "We aim to be on-site within 60 minutes anywhere in Berlin, 24 hours a day, 7 days a week. For standard bookings, we're usually available same-day or next-day."
+              },
+              {
+                "question": "Are your electricians licensed and insured?",
+                "answer": "Yes. All ElectroFix electricians are VDE-certified, fully insured, and registered with the Berlin Chamber of Skilled Crafts. We provide certificates for all notifiable work."
+              },
+              {
+                "question": "Is there a callout fee?",
+                "answer": "No callout fee on weekday standard bookings. Emergency callouts (evenings, weekends, bank holidays) have a flat €89 first-hour rate, which includes diagnosis."
+              },
+              {
+                "question": "Do you work on commercial properties?",
+                "answer": "Yes. We work with offices, retail units, restaurants, and landlords across Berlin. Ask about our planned maintenance contracts for ongoing support."
+              },
+              {
+                "question": "Can you help with EV charger grants?",
+                "answer": "Absolutely. We're an approved installer and handle the full grant application process for eligible home EV charger installations."
+              }
+            ]
+          },
+          "settings": { "background": "surface", "paddingY": "xl" }
+        },
+
+        {
+          "id": "cta",
+          "type": "cta_banner",
+          "variant": "centered",
+          "data": {
+            "heading": "Need an electrician today?",
+            "subtext": "Call now for fast response, or send us a message and we'll be back within 2 hours.",
+            "ctas": [
+              { "label": "Call +49 30 123 4567", "href": "tel:+4930123456", "style": "filled" },
+              { "label": "Send a Message", "href": "/contact", "style": "outline" }
+            ]
+          },
+          "settings": { "background": "brand", "paddingY": "xl" }
+        },
+
+        {
+          "id": "contact",
+          "type": "contact",
+          "variant": "split_form",
+          "data": {
+            "heading": "Get a Free Quote",
+            "subtext": "Fill out the form and we'll get back to you within 2 hours.",
+            "form": {
+              "id": "home_contact",
+              "fields": [
+                { "name": "name", "label": "Your Name", "type": "text", "required": true },
+                { "name": "phone", "label": "Phone Number", "type": "tel", "required": true, "placeholder": "+49 30 ..." },
+                { "name": "email", "label": "Email Address", "type": "email", "required": false },
+                {
+                  "name": "service",
+                  "label": "What do you need?",
+                  "type": "select",
+                  "required": true,
+                  "options": ["Emergency Callout", "Fuse Box / Rewiring", "Lighting", "Sockets / Switches", "EV Charger", "Commercial", "Other"]
+                },
+                { "name": "message", "label": "Details (optional)", "type": "textarea", "required": false, "placeholder": "Briefly describe the job..." }
+              ],
+              "submitLabel": "Send Request",
+              "successMessage": "Thanks! We'll be in touch within 2 hours."
+            },
+            "contactInfo": {
+              "phone": "+49 30 123 4567",
+              "email": "info@electrofix-berlin.de",
+              "address": "Musterstraße 12, 10115 Berlin",
+              "hours": "Mon–Sat 8am–8pm • Emergency line: 24/7"
+            }
+          },
+          "settings": { "background": "white", "paddingY": "xl" }
+        }
+      ]
+    },
+
+    {
+      "id": "services",
+      "slug": "/services",
+      "title": "Services",
+      "seo": {
+        "title": "Electrical Services Berlin – ElectroFix",
+        "description": "Emergency callouts, fuse box upgrades, EV charger installation, lighting, sockets and more. Licensed electricians across Berlin.",
+        "schema": "Service"
+      },
+      "blocks": [
+        {
+          "id": "hero",
+          "type": "hero",
+          "variant": "centered",
+          "data": {
+            "headline": "Electrical Services in Berlin",
+            "subtext": "From emergency repairs to full rewires — everything handled by licensed professionals.",
+            "ctas": [
+              { "label": "Get a Quote", "href": "/contact", "style": "filled" }
+            ]
+          },
+          "settings": { "background": "dark", "paddingY": "lg" }
+        },
+        {
+          "id": "services_full",
+          "type": "services",
+          "variant": "split_highlight",
+          "data": {
+            "heading": "What We Do",
+            "columns": 2,
+            "items": [
+              { "icon": "zap", "title": "Emergency Callouts", "description": "24/7 rapid response for power cuts, sparks, tripped circuits, and any urgent electrical fault.", "link": "/services/emergency" },
+              { "icon": "cpu", "title": "Fuse Box & Rewiring", "description": "Consumer unit upgrades, partial and full rewires. All work certified and guaranteed.", "link": "/services/fuse-box" },
+              { "icon": "lightbulb", "title": "Lighting", "description": "LED downlights, smart lighting systems, outdoor security and feature lighting.", "link": "/services/lighting" },
+              { "icon": "plug", "title": "Sockets & Switches", "description": "Extra sockets, USB outlets, data points, dimmer switches. Clean finish, no mess.", "link": "/services/sockets" },
+              { "icon": "car", "title": "EV Charger Installation", "description": "Home and commercial EV chargers. Approved installer. Grant applications handled.", "link": "/services/ev-charger" },
+              { "icon": "building", "title": "Commercial", "description": "Offices, retail, hospitality. Planned maintenance contracts and emergency cover.", "link": "/services/commercial" }
+            ]
+          },
+          "settings": { "background": "white", "paddingY": "xl" }
+        },
+        {
+          "id": "cta",
+          "type": "cta_banner",
+          "variant": "centered",
+          "data": {
+            "heading": "Not sure what you need?",
+            "subtext": "Call us and we'll diagnose the problem and give you a clear quote — no obligation.",
+            "ctas": [
+              { "label": "Call +49 30 123 4567", "href": "tel:+4930123456", "style": "filled" }
+            ]
+          },
+          "settings": { "background": "brand", "paddingY": "lg" }
+        }
+      ]
+    },
+
+    {
+      "id": "contact",
+      "slug": "/contact",
+      "title": "Contact",
+      "seo": {
+        "title": "Contact ElectroFix Berlin – Free Quote",
+        "description": "Get in touch for a free, no-obligation electrical quote. We respond within 2 hours.",
+        "schema": "LocalBusiness"
+      },
+      "blocks": [
+        {
+          "id": "contact_main",
+          "type": "contact",
+          "variant": "split_form",
+          "data": {
+            "heading": "Let's Talk",
+            "subtext": "Send us a message or call directly. We'll get back to you within 2 hours.",
+            "form": {
+              "id": "contact_page_form",
+              "fields": [
+                { "name": "name", "label": "Your Name", "type": "text", "required": true },
+                { "name": "phone", "label": "Phone", "type": "tel", "required": true },
+                { "name": "email", "label": "Email", "type": "email", "required": false },
+                { "name": "service", "label": "Service Needed", "type": "select", "required": true, "options": ["Emergency", "Fuse Box", "Lighting", "Sockets", "EV Charger", "Commercial", "Other"] },
+                { "name": "message", "label": "Tell us more", "type": "textarea", "required": false }
+              ],
+              "submitLabel": "Send Message",
+              "successMessage": "Got it! We'll be in touch shortly."
+            },
+            "contactInfo": {
+              "phone": "+49 30 123 4567",
+              "email": "info@electrofix-berlin.de",
+              "address": "Musterstraße 12, 10115 Berlin",
+              "hours": "Mon–Sat 8am–8pm • Emergency: 24/7"
+            }
+          },
+          "settings": { "background": "white", "paddingY": "xl" }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "website-factory",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "generate": "tsx renderer/index.ts",
+    "example": "tsx renderer/index.ts schema/examples/electrician-berlin.json dist/electrician-berlin",
+    "ai": "tsx ai/index.ts",
+    "builder": "tsx builder/server.ts",
+    "builder:build": "vite build --config builder/vite.config.ts",
+    "builder:dev": "concurrently \"tsx --watch builder/server.ts\" \"vite --config builder/vite.config.ts\""
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.10",
+    "tailwindcss": "^4.2.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.4.0",
+    "vite": "^8.0.9"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/archiver": "^7.0.0",
+    "@types/multer": "^2.1.0",
+    "@types/nodemailer": "^8.0.0",
+    "archiver": "^7.0.1",
+    "clsx": "^2.1.1",
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.8.0",
+    "multer": "^2.1.1",
+    "nodemailer": "^8.0.5",
+    "open": "^11.0.0",
+    "openai": "^6.34.0",
+    "react": "^19.2.5",
+    "react-colorful": "^5.6.1",
+    "react-dom": "^19.2.5",
+    "react-hot-toast": "^2.6.0",
+    "tailwind-merge": "^3.5.0",
+    "zustand": "^5.0.12"
+  }
+}
